@@ -28,9 +28,9 @@ Create Table ListaDeCarrerines( /*Lista que contiene los carrerines de un circui
 CIRCUITO VARCHAR(50),   
 CARRERINESTOTALES INTEGER NOT NULL,
 IDMVP VARCHAR(20) NOT NULL,
-JUGADORMASRAPIDO VARCHAR[15],
+JUGADORMASRAPIDO VARCHAR(15),
     FOREIGN KEY (IDMVP) REFERENCES JUGADOR(VICTORIAS)
-	FOREIGN KEY (VUELTAMASRAPIDA) REFERENCES CARRERIN(VUELTARAPIDA) /*Haremos una función que compare las vueltas más rápidas de cada carrerin de la lista y nos de la más rápida*/
+	FOREIGN KEY (JUGADORMASRAPIDO) REFERENCES CARRERIN(VUELTARAPIDA) /*Haremos una función que compare las vueltas más rápidas de cada carrerin de la lista y nos de la más rápida*/
 	)ENGINE = InnoDB;
 
 
@@ -38,8 +38,8 @@ INSERT INTO JUGADOR VALUES("Jofre", "JJJJ" , "UwU", 4, 15, "26,67", "GP EETAC");
 INSERT INTO JUGADOR VALUES("Oriol", "OOOO", "Arigato", 1, 37, "2,7", "GP TORRE");
 INSERT INTO JUGADOR VALUES("Victor", "VVVV", "Miau", 2, 10, "20", "GP BOCACRANK");
 
-INSERT INTO PARTIDA VALUES("JJJJ","OOOO","20:33:04","JOFRE","GP EETAC","1:33:33");
-INSERT INTO PARTIDA VALUES("VVVV","OOOO","15:23:01","JOFRE","GP TORRE","1:02:56");
+INSERT INTO CARRERIN VALUES("JJJJ","OOOO","20:33:04","JOFRE","GP EETAC","1:33:33");
+INSERT INTO CARRERIN VALUES("VVVV","OOOO","15:23:01","JOFRE","GP TORRE","1:02:56");
 
 INSERT INTO ListaDeCarrerines VALUES (20, "JJJJ", "1:02:56");
 INSERT INTO ListaDeCarrerines VALUES (16, "OOOO", "1:21:01");
